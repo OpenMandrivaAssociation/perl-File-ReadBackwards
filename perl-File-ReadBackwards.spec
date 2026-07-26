@@ -1,15 +1,13 @@
 %define upstream_name    File-ReadBackwards
-%define upstream_version 1.06
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.06
+Release:	2
 
 Summary:	Perl extension for reading a file backwards by lines
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/uperl/File-ReadBackwards
-Source0:	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-ReadBackwards-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-ReadBackwards-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ assumed to be plain text and have a line ending appropriate to the OS. But
 you can set the input record separator string on a per file basis.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
